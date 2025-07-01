@@ -135,14 +135,14 @@
                 <span class="title">Dashboard</span>
               </a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="sidebar-link" href="calendar.html">
                 <span class="icon-holder">
                   <i class="bi bi-calendar-event"></i>
                 </span>
                 <span class="title">Calendar</span>
               </a>
-            </li>
+            </li> -->
 
             <li class="nav-item">
               <a class="sidebar-link" href="charts.html">
@@ -192,6 +192,7 @@
                 </li>
               </ul>
             </li>
+            <li><input type="date" id="date-selector"/></li>
             <!-- <li class="nav-item">
               <a class="sidebar-link" href="email.html">
                 <span class="icon-holder">
@@ -317,7 +318,13 @@
                   ></i>
                 </a>
               </li>
-              <li class="search-box">
+
+              <!-- Updated HTML -->
+              <li>
+                <h5 class="lh-1 mB-0 logo-text p-25">MEENACHIL RIVER BASIN</h5>
+              </li>
+
+              <!-- <li class="search-box">
                 <a
                   class="bi bi-search no-pdd-right"
                   style="color: rgb(16, 164, 223)"
@@ -333,7 +340,7 @@
                   type="text"
                   placeholder="Search..."
                 />
-              </li>
+              </li> -->
             </ul>
             <ul class="nav-right">
               <!-- <li class="notifications dropdown">
@@ -565,7 +572,7 @@
                   </li>
                 </ul>
               </li> -->
-              <li class="dropdown">
+              <!-- <li class="dropdown">
                 <a
                   href="#"
                   class="dropdown-toggle no-after peers fxw-nw ai-c lh-1"
@@ -612,7 +619,7 @@
                     </a>
                   </li>
                 </ul>
-              </li>
+              </li> -->
             </ul>
           </div>
         </div>
@@ -769,10 +776,10 @@
                             Climate and Disaster Resilience Dashboard
                           </h6>
                         </div>
-                        <div class="layer w-100">
+                        <div class="layer w-90">
                           <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125851.79984370535!2d76.55228636538732!3d9.692242134302425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b062c9eda167a5d%3A0x2bdd5730a178588f!2sMeenachil%20River!5e0!3m2!1sen!2sin!4v1751178818813!5m2!1sen!2sin"
-                            width="600"
+                            width="950"
                             height="450"
                             style="border: 0"
                             allowfullscreen=""
@@ -976,27 +983,68 @@
                       <div class="peers ai-c jc-c gapX-20">
                         <div class="peer">
                           <span class="fsz-def fw-600 mR-10 c-grey-800"
-                            >54% <i class="fa fa-level-up c-green-500"></i
-                          ></span>
-                          <small class="c-grey-500 fw-600">Sales Growth</small>
+                            >54%</span
+                          >
+                          <small class="c-grey-500 fw-600">Humidity</small>
                         </div>
                         <div class="peer fw-600">
                           <span class="fsz-def fw-600 mR-10 c-grey-800"
-                            >$185K <i class="fa fa-level-up c-green-500"></i
-                          ></span>
-                          <small class="c-grey-500 fw-600">Dec Sales</small>
+                            >88%</span
+                          >
+                          <small class="c-grey-500 fw-600">Rain</small>
                         </div>
                         <div class="peer fw-600">
                           <span class="fsz-def fw-600 mR-10 c-grey-800"
-                            >60% <i class="fa fa-level-up c-green-500"></i
-                          ></span>
-                          <small class="c-grey-500 fw-600">Profit Growth</small>
+                            >60kmph</span
+                          >
+                          <small class="c-grey-500 fw-600">Wind Speed</small>
                         </div>
                         <div class="peer fw-600">
                           <span class="fsz-def fw-600 mR-10 c-grey-800"
-                            >$72K <i class="fa fa-level-up c-green-500"></i
-                          ></span>
-                          <small class="c-grey-500 fw-600">Dec Profit</small>
+                            >30°</span
+                          >
+                          <small class="c-grey-500 fw-600">Temperature</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="masonry-item col-md-6">
+                <!-- #Monthly Stats ==================== -->
+                <div class="bd bgc-white">
+                  <div class="layers">
+                    <div class="layer w-100 pX-20 pT-20">
+                      <h6 class="lh-1">Monthly Stats</h6>
+                    </div>
+                    <div class="layer w-100 p-20">
+                      <canvas id="area-chart" height="220"></canvas>
+                    </div>
+                    <div class="layer bdT p-20 w-100">
+                      <div class="peers ai-c jc-c gapX-20">
+                        <div class="peer">
+                          <span class="fsz-def fw-600 mR-10 c-grey-800"
+                            >54%</span
+                          >
+                          <small class="c-grey-500 fw-600">Humidity</small>
+                        </div>
+                        <div class="peer fw-600">
+                          <span class="fsz-def fw-600 mR-10 c-grey-800"
+                            >88%</span
+                          >
+                          <small class="c-grey-500 fw-600">Rain</small>
+                        </div>
+                        <div class="peer fw-600">
+                          <span class="fsz-def fw-600 mR-10 c-grey-800"
+                            >60kmph</span
+                          >
+                          <small class="c-grey-500 fw-600">Wind Speed</small>
+                        </div>
+                        <div class="peer fw-600">
+                          <span class="fsz-def fw-600 mR-10 c-grey-800"
+                            >30°</span
+                          >
+                          <small class="c-grey-500 fw-600">Temperature</small>
                         </div>
                       </div>
                     </div>
