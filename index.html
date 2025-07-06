@@ -196,7 +196,7 @@
                 </li>
               </ul>
             </li>
-            <li><input type="date" id="date-selector"/></li>
+            <li><input type="date" id="date-selector" /></li>
             <!-- <li class="nav-item">
               <a class="sidebar-link" href="email.html">
                 <span class="icon-holder">
@@ -780,7 +780,9 @@
                             Climate and Disaster Resilience Dashboard
                           </h6>
                         </div>
-                        <div class="layer w-100"><div id="map" style="height: 500px;"></div></div>
+                        <div class="layer w-100">
+                          <div id="map" style="height: 500px"></div>
+                        </div>
                       </div>
                     </div>
                     <div class="peer bdL p-20 w-30p@lg+ w-100p@lg-">
@@ -970,7 +972,117 @@
                       <h6 class="lh-1">Monthly Stats</h6>
                     </div>
                     <div class="layer w-100 p-20">
-                      <canvas id="line-chart" height="220"></canvas>
+                      <div class="layer w-100 p-20">
+                      <style>
+                        body {
+                          background-color: #001f3f; /* Page background */
+                          color: white;
+                          font-family: Arial, sans-serif;
+                          text-align: center;
+                        }
+                        #myChart2 {
+                          background-color: #20232a; /* Chart canvas background */
+                          border-radius: 10px;
+                          padding: 10px;
+                        }
+                        .averages {
+                          margin-top: 20px;
+                          font-size: 16px;
+                          color: #ffffff;
+                        }
+                      </style>
+                      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+                      <canvas
+                        id="myChart2"
+                        style="width: 100%; max-width: 700px; height: 350px;"
+                      ></canvas>
+
+                      <script>
+                        const xValues2 = [
+                        "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+                        ];
+
+                        const datasets2 = [
+                        {
+                        label: "Rainfall",
+                        data: [
+                        55, 65, 60, 75, 70, 85, 80
+                        ],
+                        borderColor: "blue",
+                        fill: false,
+                        },
+                        {
+                        label: "Wind Speed",
+                        data: [
+                        11, 55, 79, 44, 22, 11, 15
+                        ],
+                        borderColor: "green",
+                        fill: false,
+                        },
+                        {
+                        label: "Humidity Percent",
+                        data: [
+                        65, 70, 75, 80, 85, 70, 95
+                        ],
+                        borderColor: "teal",
+                        fill: false,
+                        },
+                        {
+                        label: "Temperature Celsius",
+                        data: [
+                        21, 23, 22, 24, 25, 26, 27
+                        ],
+                        borderColor: "red",
+                        fill: false,
+                        },
+                        ];
+
+                        new Chart("myChart2", {
+                          type: "line",
+                          data: {
+                            labels: xValues2,
+                            datasets: datasets2,
+                          },
+                          options: {
+                            title: {
+                              display: true,
+                              text: "Weather & Wind Speed Data Overview",
+                              fontColor: "white",
+                              fontSize: 18,
+                            },
+                            legend: {
+                              display: true,
+                              labels: {
+                                fontColor: "white",
+                              },
+                            },
+                            scales: {
+                              xAxes: [
+                                {
+                                  ticks: {
+                                    fontColor: "white",
+                                  },
+                                  gridLines: {
+                                    color: "#444",
+                                  },
+                                },
+                              ],
+                              yAxes: [
+                                {
+                                  ticks: {
+                                    fontColor: "white",
+                                  },
+                                  gridLines: {
+                                    color: "#444",
+                                  },
+                                },
+                              ],
+                            },
+                          },
+                        });
+                      </script>
+                    </div>
                     </div>
                     <div class="layer bdT p-20 w-100">
                       <div class="peers ai-c jc-c gapX-20">
@@ -1011,7 +1123,115 @@
                       <h6 class="lh-1">Monthly Stats</h6>
                     </div>
                     <div class="layer w-100 p-20">
-                      <canvas id="area-chart" height="220"></canvas>
+                      <style>
+                        body {
+                          background-color: #001f3f; /* Page background */
+                          color: white;
+                          font-family: Arial, sans-serif;
+                          text-align: center;
+                        }
+                        #myChart {
+                          background-color: #20232a; /* Chart canvas background */
+                          border-radius: 10px;
+                          padding: 10px;
+                        }
+                        .averages {
+                          margin-top: 20px;
+                          font-size: 16px;
+                          color: #ffffff;
+                        }
+                      </style>
+                      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+                      <canvas
+                        id="myChart"
+                        style="width: 100%; max-width: 700px; height: 350px;"
+                      ></canvas>
+
+                      <script>
+                        const xValues = [
+                          "January", "February", "March", "April", "May", "June", "July",
+                        ];
+
+                        const datasets = [
+                        {
+                        label: "Rainfall",
+                        data: [
+                        50, 60, 55, 70, 65, 80, 75
+                        ],
+                        borderColor: "blue",
+                        fill: false,
+                        },
+                        {
+                        label: "Wind Speed",
+                        data: [
+                        88, 55, 44, 66, 55, 70, 14
+                        ],
+                        borderColor: "green",
+                        fill: false,
+                        },
+                        {
+                        label: "Humidity Percent",
+                        data: [
+                        60, 65, 70, 75, 80, 85, 90
+                        ],
+                        borderColor: "orange",
+                        fill: false,
+                        },
+                        {
+                        label: "Temperature Celsius",
+                        data: [
+                        20, 32, 21, 43, 24, 65, 26
+                        ],
+                        borderColor: "red",
+                        fill: false,
+                        },
+                        ];
+
+                        new Chart("myChart", {
+                          type: "line",
+                          data: {
+                            labels: xValues,
+                            datasets: datasets,
+                          },
+                          options: {
+                            title: {
+                              display: true,
+                              text: "Weather & Wind Speed Data Overview",
+                              fontColor: "white",
+                              fontSize: 18,
+                            },
+                            legend: {
+                              display: true,
+                              labels: {
+                                fontColor: "white",
+                              },
+                            },
+                            scales: {
+                              xAxes: [
+                                {
+                                  ticks: {
+                                    fontColor: "white",
+                                  },
+                                  gridLines: {
+                                    color: "#444",
+                                  },
+                                },
+                              ],
+                              yAxes: [
+                                {
+                                  ticks: {
+                                    fontColor: "white",
+                                  },
+                                  gridLines: {
+                                    color: "#444",
+                                  },
+                                },
+                              ],
+                            },
+                          },
+                        });
+                      </script>
                     </div>
                     <div class="layer bdT p-20 w-100">
                       <div class="peers ai-c jc-c gapX-20">
