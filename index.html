@@ -75,7 +75,11 @@
         }
       }
     </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
     <script defer="defer" src="main.js"></script>
+    <script defer="defer" src="map.js"></script>
   </head>
   <body class="app">
     <div id="loader">
@@ -722,7 +726,7 @@
                               };
                             </script> -->
                             <canvas
-                              class="clear-day"
+                              class="wind"
                               width="30"
                               height="30"
                             ></canvas>
@@ -748,7 +752,7 @@
                         <div class="peers ai-sb fxw-nw">
                           <div class="peer peer-greed">
                             <canvas
-                              class="wind"
+                              class="clear-day"
                               width="30"
                               height="30"
                             ></canvas>
@@ -776,18 +780,7 @@
                             Climate and Disaster Resilience Dashboard
                           </h6>
                         </div>
-                        <div class="layer w-90">
-                          <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125851.79984370535!2d76.55228636538732!3d9.692242134302425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b062c9eda167a5d%3A0x2bdd5730a178588f!2sMeenachil%20River!5e0!3m2!1sen!2sin!4v1751178818813!5m2!1sen!2sin"
-                            width="950"
-                            height="450"
-                            style="border: 0"
-                            allowfullscreen=""
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"
-                          ></iframe
-                          ><br />
-                        </div>
+                        <div class="layer w-100"><div id="map" style="height: 500px;"></div></div>
                       </div>
                     </div>
                     <div class="peer bdL p-20 w-30p@lg+ w-100p@lg-">
@@ -1224,7 +1217,7 @@
                       <div class="sales-report-header p-20">
                         <div class="peers ai-c jc-sb gap-40">
                           <div class="peer peer-greed">
-                            <h5>November 2029</h5>
+                            <h5>July 2025</h5>
                             <p class="mB-0">Weather Report</p>
                           </div>
                           <div class="peer">
@@ -1319,7 +1312,7 @@
                             <div class="layer w-100">
                               <div class="peers fxw-nw ai-c">
                                 <div class="peer mR-20">
-                                  <h3>32<sup>°F</sup></h3>
+                                  <h3>32<sup>°C</sup></h3>
                                 </div>
                                 <div class="peer">
                                   <canvas
@@ -1341,11 +1334,11 @@
                         <div class="peer">
                           <div class="layers ai-fe">
                             <div class="layer">
-                              <h5 class="mB-5">Monday</h5>
+                              <h5 class="mB-5">Tuesday</h5>
                             </div>
                             <div class="layer">
                               <span class="fw-600 c-grey-600"
-                                >Nov, 01 2032</span
+                                >July, 08 2025</span
                               >
                             </div>
                           </div>
